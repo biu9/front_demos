@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>New Year Count</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div id="year" class="year"></div>
+
+        <nav id="navbar">
+            <ul class="navbar">
+                <li>
+                    <a href="javascript:void(0)" class="logo_block">
+                        <img class="logo_img"
+                            src="./img/background.jpg"
+                        />
+                    </a>
+                </li>
+                <li><a href="#">主页</a></li>
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">联系</a></li>
+                <li><a href="#">关于</a></li>
+                <li><a href="#" class="about"></a></li>
+            </ul>
+        </nav>
+
+        <span class="toggle" onclick="openNav()">测试</span>
+        <script>
+            function openNav(){
+                document.getElementById("navbar").style.width = "0";
+            }
+        </script>
+
+        <h1>New Year Count</h1>
+
+        <div id="countdown" class="countdown">
+            <div class="time">
+                <h2 id="days">00</h2>
+                <small>days</small>
+            </div>
+            <div class="time">
+                <h2 id="hours">00</h2>
+                <small>hours</small>
+            </div>
+            <div class="time">
+                <h2 id="minutes">00</h2>
+                <small>minutes</small>
+            </div>
+            <div class="time">
+                <h2 id="seconds">00</h2>
+                <small>seconds</small>
+            </div>
+        </div>
+
+        <img 
+            src="./img/spinner.gif"
+            alt="loading------"
+            id="loading"
+            class="loading"
+        />
+
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -7,3 +7,5 @@
 - 感觉目前的渲染方式很适合改写成jsx的形式，以后可能会在react里面重构(?
 - 本来想用`https://api.lolicon.app/setu/v2`这个api的，但debug了好几个小时以后还是不行，总是显示`type error`，根据segment fault的说法可能是服务器不支持跨源啥的orz
 - 以后可能会再看看，或者自己写一个api(?
+- 貌似是因为fetch的时候采用了no-cors模式以解决跨源策略，但是no-cors模式不能接收返回的json数据，这样就导致了新的报错
+- 感觉是api的问题orz

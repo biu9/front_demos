@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,4 +62,69 @@
     </div>
     <script src="./index.js"></script>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态卡片</title>
+    <link href="./index.css" rel="stylesheet">
+    <!-- integrity:包含行内元数据，是一个用浏览器获取的资源文件的哈希值，以base64编码的方式加密-->
+    <!-- crossorigin:指定在加载相关资源时是否必须使用CORS，anonymous表示会发起一个跨域请求，但不发送任何认证信息-->
+    <link 
+
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+        crossorigin="anonymous"
+    />
+</head>
+<body>
+    <button id="clear" class="clear btn">
+        <i class="fas fa-trash-alt"></i>
+        删除卡片
+    </button>
+    <h1>
+        动态卡片
+        <button id="show" class="btn btn-small">
+            <i class="fas fa-plus"></i>
+            添加卡片
+        </button>
+    </h1>
+    <div id="cards-container" class="cards"></div>
+    <div class="navigation">
+        <button id="prev" class="nav-button">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <p id="current"></p>
+
+        <button id="next" class="nav-button">
+            <i class="fas fa-chevron-right"></i>
+    </div>
+    <div id="add-container" class="add-container">
+        <h1>
+            添加卡片
+            <button id="hide" class="btn btn-small">
+                <i class="fas fa-times"></i>
+            </button>
+        </h1>
+        <div class="form-group">
+            <label for="question">问题</label>
+            <textarea id="question" placeholder="请输入问题"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="answer">答案</label>
+            <textarea id="answer" placeholder="请输入答案"></textarea>
+        </div>
+        <button id="add-card" class="btn">
+            <i class="fas fa-plus"></i>
+            添加卡片
+        </button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+>>>>>>> 1d2aca9e2dadfa8c5a729c2e8708168ccb012f99
 </html>

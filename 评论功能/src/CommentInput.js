@@ -27,11 +27,33 @@ class CommentInput extends Component {
     //点击按钮的时候先调用handleSubmit方法
     handleSubmit() {
         if(this.props.onSubmit){
-            console.log("123");
             const {username,content} = this.state;
             this.props.onSubmit({username,content});
         }
         this.setState({content:''});
+    }
+
+    handleUsernameBlur(event) {
+        this._saveUsername(event.target.value);
+    }
+
+    _saveUsername(username) {
+        localStorage.setItem('username', username);
+    }
+
+    _loadUsername() {
+        const username = localStorage.getItem('username');
+        this.setState({
+            username:username
+        });
+    }
+
+    componentWillUnmount() {
+        this._loadUsername();
+    }
+
+    componentDidMount() {
+        this.textarea.focus();
     }
     render(){
         return(
@@ -40,8 +62,9 @@ class CommentInput extends Component {
                     <span className = "comment-field-name">用户名:</span>
                     <div className="comment-field-input">
                         <input 
+                        onBlur={this.handleUsernameBlur.bind(this)}
                         placeholder="输入姓名!" 
-                        value={this.state.usename}
+                        value={this.state.username}
                         onChange={this.handleUsernameChange.bind(this)}
                         >
                         </input>
@@ -51,6 +74,7 @@ class CommentInput extends Component {
                     <span className = "comment-field-name">评论:</span>
                     <div className="comment-field-input">
                         <textarea 
+                        ref={(textarea) => this.textarea = textarea}
                         placeholder="输入评论!" 
                         value={this.state.content}
                         onChange={this.handleContentChange.bind(this)}

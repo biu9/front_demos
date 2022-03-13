@@ -62,14 +62,14 @@ body {
     width: 80px;
     border: none;
     border-radius: 3px;
-    background-color: #00a3cf;
+    background-color: #000000;
     color: #fff;
     outline: none;
     cursor: pointer;
 }
 
 .comment-field-button button:active {
-    background-color: #13c1f1;
+    background-color: #353738;
 }
 
 .comment-list {
@@ -88,14 +88,30 @@ body {
 
 .comment .comment-user {
     flex-shrink: 0;/*缩小比例*/
+    width: 40px;
+    word-wrap: break-word;
 }
 
-.comment span {
-    color: #00a3cf;
+.comment-user{
+    color: #333738;
     font-style: italic;
 }
 
 .comment p {
     margin:0;
-    text-indent: 2em;/*段落第一行缩减*/
+    padding-top: 0px;
+    padding-left: 10px;
+    text-indent: 0em;/*段落第一行缩减*/
+    width: 320px;
+    word-wrap: break-word;/*自动换行*/
+}
+
+.comment-delete {
+    margin-left: auto;
+    margin-top: 100px;
+    padding: 2px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    cursor: pointer;
 }
